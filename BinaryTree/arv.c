@@ -46,12 +46,6 @@ void ins(Item x, Arv *A) {
         ins(x, &(*A)->dir);
 }
 
-int busca(Item x, Arv A) {
-    if (A == NULL) return 0;
-    if (x == A->item) return 1;
-    if (x < A->item) return busca(x, A->esq);
-    else return busca(x, A->dir);
-}
 
 Item retmax(Arv *A) {
     if (*A == NULL) abort();
